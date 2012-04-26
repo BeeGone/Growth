@@ -1,6 +1,6 @@
-package core
+package com.beegone.core
 {
-	import core.managers.*;
+	import com.beegone.core.managers.*;
 
 	public class GrowthCore
 	{

@@ -1,4 +1,4 @@
-package core.enums
+package com.beegone.core.enums
 {
 	public class EventTypes
 	{

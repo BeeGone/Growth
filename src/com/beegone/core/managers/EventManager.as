@@ -1,4 +1,4 @@
-package core.managers
+package com.beegone.core.managers
 {
 	public class EventManager
 	{

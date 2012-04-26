@@ -1,4 +1,4 @@
-package core.interfaces
+package com.beegone.core.interfaces
 {
 	public interface Scriptable
 	{

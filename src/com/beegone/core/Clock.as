@@ -1,6 +1,6 @@
-package core
+package com.beegone.core
 {
-	import core.managers.EventManager;
+	import com.beegone.core.managers.EventManager;
 
 	public class Clock
 	{
