@@ -12,5 +12,11 @@ package com.beegone.core.enums
 		public static final var FIGHT_WIN:int = 101;
 		public static final var FIGHT_LOST:int = 102;
 		public static final var KILLED_MONSTER:int = 103;
+		
+		private var type:String;
+		
+		public function Directions(type:int){
+			this.type = type;
+		}
 	}
 }

@@ -1,0 +1,14 @@
+UID: <see GuidlinesScript.txt>
+NAME: <see GuidlinesScript.txt>
+
+DESCRIPTION: <see GuidlinesItems.txt>
+
+EQUIPABLE: <true/false>
+USABLE: <true/false>
+MAXSTACK: <see GuidlinesItems.txt>
+DURABILITY: <see GuidlinesItems.txt> (either the uses of the item
+
+
+EFFECTS: [When equipable] effect1,type
+
+Stats: [When usable] stat1 = mutation1; stat2 = mutation2

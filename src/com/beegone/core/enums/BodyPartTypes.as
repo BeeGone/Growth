@@ -2,23 +2,32 @@ package com.beegone.core.enums
 {
 	public class BodyPartTypes
 	{
-		public static final var HAIR:String = "Hair";
-		public static final var HEAD:String = "Head";
-		public static final var MOUTH:String = "Mouth";
-		public static final var NECK:String = "Neck";
-		public static final var SHOULDERS:String = "Shoulder";
-		public static final var ARMS:String = "Arms";
-		public static final var TORSO:String = "Torso";
-		public static final var BOOB:String = "Boob";
-		public static final var GUT:String = "Gut";
-		public static final var COCK:String = "Cock";
-		public static final var BALL:String = "Ball";
-		public static final var ASSHOLE:String = "Asshole";
-		public static final var CUNT:String = "Cunt";
-		public static final var ASS:String = "Ass";
-		public static final var LEGS:String = "Legs";
-		public static final var CENTAUR:String = "Centaur";
-		public static final var HANDS:String = "Hands";
-		public static final var FEET:String = "Feet";
+		public static const var HAIR:String = "Hair";
+		public static const var HEAD:String = "Head";
+		public static const var MOUTH:String = "Mouth";
+		public static const var NECK:String = "Neck";
+		public static const var SHOULDERS:String = "Shoulder";
+		public static const var ARMS:String = "Arms";
+		public static const var TORSO:String = "Torso";
+		public static const var BOOB:String = "Boob";
+		public static const var GUT:String = "Gut";
+		public static const var COCK:String = "Cock";
+		public static const var BALL:String = "Ball";
+		public static const var ASSHOLE:String = "Asshole";
+		public static const var CUNT:String = "Cunt";
+		public static const var ASS:String = "Ass";
+		public static const var LEGS:String = "Legs";
+		public static const var CENTAUR:String = "Centaur";
+		public static const var HANDS:String = "Hands";
+		public static const var FEET:String = "Feet";
+		
+		private var type:String;
+		
+		public function BodyPartTypes(type:String){
+			if(type == null){
+				type = "";
+			}
+			this.type = type;
+		}
 	}
 }

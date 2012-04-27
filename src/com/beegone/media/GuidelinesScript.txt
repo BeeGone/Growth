@@ -1,0 +1,56 @@
+Good day,
+
+This is a small document will explain the shared components between all scripts.
+Inside each map there is a document similar to this one explaining the shared components
+of the scripts below etc.
+
+FILE PLACEMENT:
+Files can be placed in their own folder, only when you reached the end of the
+original file structure. Exception on this rule is the custom-folder.
+
+media
+ | - items
+ | - locations
+ |    \ - custom*
+ | - monsters
+ |    \ - custom*
+ | - npc
+ |    \ - custom*
+ | - player
+ |    | - descriptions
+ |    | - perks
+ |    \ - stats
+ | - quests
+ |    \ - custom*
+ \ - bodyDescription 
+
+
+SHARED COMPONENTS:
+
+UID: <Unique IDentifier>:String
+	This is a identifier, made by the author of the script. One should take care not
+	to make duplicate UID's, when this happens the script which is read first with that
+	UID will be accepted, the following will not. A warning will be shown when a 
+	double has been found.
+	
+	Example of making an identifier:
+	"[language].[shortname-author].[shortname-title]"
+	Example: "en.B3G1.TWaking1
+	
+	Adivised is when using complex questline to include the questarc-shortname
+
+NAME: <name>:string
+	Every script has a form of a name: quest name, item name, npc name, body(race)...
+	Here duplicates are allowed, unlike UID, and won't affect the reading proccess of
+	the other script-files
+
+TYPE: <enum>:string
+	Some scripts require a type, this is to identify what kind of object you try to make.
+	What you can use will be explained in each guidline<type>.txt file inside each folder.
+
+WHEN USING CUSTOM:
+Make sure you are pointing to the right script. In each custom-folder is a template available
+for refference.
+
+Thanks for reading,
+BeeGone
