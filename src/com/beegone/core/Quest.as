@@ -10,7 +10,7 @@ package com.beegone.core
 		
 		public function Quest(uid:String, title:String, description:String, type:QuestTypes, arc:QuestArc)
 		{
-			super(uid,title, description);
+			super(uid, title, description);
 			this.type = type;
 			this.arc = arc;
 		}

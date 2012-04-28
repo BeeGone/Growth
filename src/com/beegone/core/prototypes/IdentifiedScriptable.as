@@ -1,8 +1,9 @@
 package com.beegone.core.prototypes
 {
+	import com.beegone.core.interfaces.Descriptable;
 	import com.beegone.core.interfaces.Scriptable;
 	
-	public class IdentifiedScriptable extends Identifyable implements Scriptable
+	public class IdentifiedScriptable extends Identifyable implements Scriptable, Descriptable
 	{
 		private var _description:String;
 		
@@ -27,8 +28,11 @@ package com.beegone.core.prototypes
 			return false;
 		}
 		
-		public function get description():String {
-			return _description;
+		public function get description():String
+		{
+			return _description();
 		}
+		
+		
 	}
 }

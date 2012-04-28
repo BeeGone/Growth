@@ -9,7 +9,7 @@ package com.beegone.core.enums
 		
 		private var type:String;
 		
-		public function Directions(type:String){
+		public function QuestTypes(type:String){
 			if(type == null){
 				type = "";
 			}
