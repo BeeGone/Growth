@@ -1,9 +1,10 @@
 package com.beegone.core
 {
-	import com.beegone.core.interfaces.*;
 	import com.beegone.core.enums.*;
+	import com.beegone.core.interfaces.*;
+	import com.beegone.core.prototypes.Identifyable;
 
-	public class Item implements Descriptable
+	public class Item extends Identifyable implements Descriptable
 	{
 		private var _equipable:Boolean;
 		private var _equipmentType:EquipmentTypes = EquipmentTypes.NONE;
@@ -35,6 +36,9 @@ package com.beegone.core
 			}
 		}
 
+		public function set description(_description:String){
+			this._description = _description;
+		}
 		public function get description(){
 			return _description;
 		}
@@ -42,5 +46,7 @@ package com.beegone.core
 		public function get effects(){
 			return _effects;
 		}
+		
+		public function addEffect(target:EquipmentTypes, 
 	}
 }
