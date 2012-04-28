@@ -13,6 +13,8 @@ package com.beegone.core.managers
 			}
 		}
 		
-		public function addBodypart(target:BodyManager, 
+		public function addBodypart(target:BodyPartTypes){
+			//TODO implement code to achieve this
+		}
 	}
 }
