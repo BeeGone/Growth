@@ -2,16 +2,16 @@ package com.beegone.core.managers
 {
 	public class EventManager
 	{
-		private static final var instance:EventManager = this;
-		//EventQueues
-		private var eventQueue:Array;
+		//EventQueue
+		private var eventQueue:Object;
 		
 		//EventListeners
 		private var listeners:Array;
 		
 		public function EventManager()
 		{
-			eventQueue = new Array();
+			eventQueue = new Object();
+			// For loop like bodymanager.
 		}
 		
 		public function getInstance():EventManager {
