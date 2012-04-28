@@ -47,7 +47,7 @@ package com.beegone.core
 			_weightNumber = weightNumber;
 		}
 
-		public function growWidth(widthIncrease:Number:Boolean {
+		public function growWidth(widthIncrease:Number):Boolean {
 			if(_width + widthIncrease >= _minWidth && _width + widthIncrease <= _maxWidth){
 				_width = _width + widthIncrease;
 				return true;
