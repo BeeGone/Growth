@@ -1,11 +1,13 @@
 package com.beegone.core.prototypes
 {
-	public class Identifyable
+	import com.beegone.core.interfaces.Identifyable;
+
+	public class IdentifyablePrototype implements Identifyable
 	{
 		private var _uid:String;
 		private var _name:String;
 		
-		public function Identifyable(uid:String, name:String) {
+		public function IdentifyablePrototype(uid:String, name:String) {
 			this._uid = uid;
 			this._name = name
 		}

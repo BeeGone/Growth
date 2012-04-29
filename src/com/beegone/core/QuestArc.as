@@ -4,12 +4,12 @@ package com.beegone.core
 
 	public class QuestArc extends IdentifiedScriptable
 	{
-		private var quests:Object;
+		private var quests:Array;
 		private var questFlags:Object;
 		
 		public function QuestArc(uid:String, title:String, description:String){
 			super(uid, name, description);
-			this.quests = new Object();
+			this.quests = new Array();
 			this.questFlags = new Object();
 		}
 		

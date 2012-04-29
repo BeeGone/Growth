@@ -3,7 +3,7 @@ package com.beegone.core.prototypes
 	import com.beegone.core.interfaces.Descriptable;
 	import com.beegone.core.interfaces.Scriptable;
 	
-	public class IdentifiedScriptable extends Identifyable implements Scriptable, Descriptable
+	public class IdentifiedScriptable extends IdentifyablePrototype implements Scriptable, Descriptable
 	{
 		private var _description:String;
 		

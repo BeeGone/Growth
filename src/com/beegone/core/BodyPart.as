@@ -1,9 +1,9 @@
 package com.beegone.core
 {
 	import com.beegone.core.enums.BodyPartTypes;
-	import com.beegone.core.prototypes.Identifyable;
+	import com.beegone.core.prototypes.IdentifyablePrototype;
 
-	public class BodyPart extends Identifyable
+	public class BodyPart extends IdentifyablePrototype
 	{
 		private var _part:BodyPartTypes;
 		private var _type:BodyType;

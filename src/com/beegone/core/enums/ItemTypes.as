@@ -7,6 +7,7 @@ package com.beegone.core.enums
 		public static const USABLE:String = "Usable";
 		
 		public static const KEY:String = "Key";
+		public static const SPECIAL:String = "Special";
 		
 		private var type:String;
 		

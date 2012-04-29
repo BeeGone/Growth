@@ -1,8 +1,8 @@
 package com.beegone.core
 {
-	import com.beegone.core.prototypes.Identifyable;
+	import com.beegone.core.prototypes.IdentifyablePrototype;
 	
-	public class BodyType extends Identifyable
+	public class BodyType extends IdentifyablePrototype
 	{
 		private var _race:String;
 		

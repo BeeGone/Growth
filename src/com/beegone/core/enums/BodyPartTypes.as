@@ -11,6 +11,7 @@ package com.beegone.core.enums
 		public static const TORSO:String = "Torso";
 		public static const BOOB:String = "Boob";
 		public static const GUT:String = "Gut";
+		public static const UDDER:String = "Udder";
 		public static const COCK:String = "Cock";
 		public static const BALL:String = "Ball";
 		public static const ASSHOLE:String = "Asshole";
@@ -31,7 +32,7 @@ package com.beegone.core.enums
 		}
 		
 		public static function getIterator():Array {
-			var iterator:Array = new Array(HAIR, HEAD, MOUTH, NECK, SHOULDERS, ARMS, TORSO, BOOB, GUT, COCK, BALL, ASSHOLE,
+			var iterator:Array = new Array(HAIR, HEAD, MOUTH, NECK, SHOULDERS, ARMS, TORSO, BOOB, GUT, UDDER, COCK, BALL, ASSHOLE,
 				ASSHOLE, CUNT, ASS, LEGS, CENTAUR, HANDS, FEET);
 			return iterator;
 		}

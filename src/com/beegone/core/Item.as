@@ -2,9 +2,9 @@ package com.beegone.core
 {
 	import com.beegone.core.enums.*;
 	import com.beegone.core.interfaces.*;
-	import com.beegone.core.prototypes.Identifyable;
+	import com.beegone.core.prototypes.IdentifyablePrototype;
 
-	public class Item extends Identifyable implements Descriptable
+	public class Item extends IdentifyablePrototype implements Descriptable
 	{
 		private var _equipable:Boolean;
 		private var _equipmentType:EquipmentTypes = EquipmentTypes.NONE;
@@ -23,16 +23,16 @@ package com.beegone.core
 			_usable = usable;
 		
 			if _equipable {
-				_effects.equip = new Array();
+				_effects["equip"] = new Array();
 				_equipmentType = type;
 			}
 			
 			if _consumable {
-				_effects.consume = new Array();
+				_effects["consume"] = new Array();
 			}
 			
 			if _usable {
-				_effects.use = new Array();
+				_effects["use"] = new Array();
 			}
 		}
 
@@ -47,6 +47,20 @@ package com.beegone.core
 			return _effects;
 		}
 		
-		public function addEffect(target:EquipmentTypes, 
+		public function addEffect(item:ItemTypes, effect:ItemEffect):Boolean {
+			var temp:Array;
+			if(item == ItemTypes.EQUIPABLE && _equipable) {
+				temp = _effects["equip"];
+			} else if (item == ItemTypes.CONSUMABLE && _consumable) {
+				temp = _effects["consume"];
+			} else if (item == ItemTypes.USABLE && _usable) {
+				temp = _effects["use"];
+			}
+			if (temp != null) {
+				temp.push(effect);
+				return true
+			}
+			return false;
+		}
 	}
 }
