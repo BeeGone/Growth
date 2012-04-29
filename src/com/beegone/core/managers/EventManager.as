@@ -1,6 +1,8 @@
 package com.beegone.core.managers
 {
-	public class EventManager
+	import com.beegone.core.interfaces.Timeable;
+
+	public class EventManager implements Timeable
 	{
 		//EventQueue
 		private var eventQueue:Object;
@@ -14,11 +16,7 @@ package com.beegone.core.managers
 			// For loop like bodymanager.
 		}
 		
-		public function getInstance():EventManager {
-			return instance;
-		}	
-		
-		public function processTick():void{
+		public function processTick(tick:Number):void{
 			
 		}
 		

@@ -33,6 +33,12 @@ package com.beegone.core.prototypes
 			_name = value;
 		}
 
-
+		public function equals(identity:*):Boolean {
+			if(identity instanceof IdentifyablePrototype){
+				var identityProt:IdentifyablePrototype = identity;
+				return _uid == identityProt.uid && _name == identityProt.name;
+			}
+			return false;
+		}
 	}
 }

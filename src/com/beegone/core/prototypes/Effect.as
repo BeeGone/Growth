@@ -15,7 +15,7 @@ package com.beegone.core.prototypes
 			_typeSource = typeSource;
 		}
 		
-		public function get effect():ParameterTypes
+		public function get effects():ParameterTypes
 		{
 			return _effect;
 		}

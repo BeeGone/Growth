@@ -18,5 +18,10 @@ package com.beegone.core
 		{
 			return _durability;
 		}
+		
+		public function dropDurability(drop:Number):Boolean {
+			_durability -= drop;
+			return _durability <= 0;
+		}
 	}
 }
