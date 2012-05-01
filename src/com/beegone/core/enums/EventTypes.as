@@ -12,6 +12,9 @@ package com.beegone.core.enums
 		public static const FIGHT_WIN:int = 101;
 		public static const FIGHT_LOSS:int = 102;
 		public static const KILLED_MONSTER:int = 103;
+		//Other
+		public static const GROWTH:int = 200;
+		public static const TALK_TO_NPC = 201;
 		
 		private var type:int;
 		
@@ -20,7 +23,7 @@ package com.beegone.core.enums
 		}
 		
 		public static function getIterator():Array {
-			var iterator:Array = new Array(CUSTOM, WAIT, MOVE, PICK_UP, FIGHT_CUSTOM, FIGHT_WIN, FIGHT_LOSS, KILLED_MONSTER);
+			var iterator:Array = new Array(CUSTOM, WAIT, MOVE, PICK_UP, FIGHT_CUSTOM, FIGHT_WIN, FIGHT_LOSS, KILLED_MONSTER, GROWTH);
 			return iterator;
 		}
 	}

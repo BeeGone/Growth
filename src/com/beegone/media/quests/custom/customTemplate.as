@@ -1,5 +1,5 @@
 
-import com.beegone.core.Quest;
+import com.beegone.core.prototypes.Quest;
 
 var customquest:Quest = new CustomQuest;
 

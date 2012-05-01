@@ -15,17 +15,17 @@ package com.beegone.core.prototypes
 		
 		public function preScript():Boolean
 		{
-			return false;
+			return true;
 		}
 		
-		public function script():Boolean
+		public function script(event:GameEvent):Boolean
 		{
-			return false;
+			return true;
 		}
 		
 		public function postScript():Boolean
 		{
-			return false;
+			return true;
 		}
 		
 		public function get description():String
