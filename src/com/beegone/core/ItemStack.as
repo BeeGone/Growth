@@ -5,10 +5,15 @@ package com.beegone.core
 		private var _item:Item;
 		private var _amount:Number;
 		
-		public function ItemStack(item:Item, size:Number)
+		public function ItemStack(item:Item, amount:Number)
 		{
 			_item = item;
-			_amount = size;
+			_amount = amount;
+		}
+		
+		public function ItemStack(item:Item){
+			_item = item;
+			_amount = 1;
 		}
 		
 		public function ItemStack(item:Item){
@@ -32,7 +37,7 @@ package com.beegone.core
 			return _amount;
 		}
 		
-		public function get item():Number {
+		public function get item():Item {
 			return _item;
 		}
 		
@@ -49,17 +54,19 @@ package com.beegone.core
 		}
 		
 		public function addItem(item:Item):Boolean {
-			if(!_item.equals(item)) {
+			//Check for free space
+			if(_item.maxStack >= _amount){
 				return false;
 			}
-			if(_item.maxStack >= _amount){
+			//Check special cases
+			if(!_item.used || !_item.equals(item)) {
 				return false;
 			}
 			_amount++;
 			return true;
 		}
 		
-		public function addAmount(amount:Number):Number {
+		public function mutateAmount(amount:Number):Number {
 			_amount += amount;
 		}
 		
@@ -68,12 +75,19 @@ package com.beegone.core
 		}
 		
 		public function mergeStacks(stack:ItemStack):Number {
+			//Check not full and item from stack equals the stored item
 			if(!isFull() && _item.equals(stack.item)) {
-				var addStackAmount:Number = stack.amount;
-				//TODO Finish this!
+				//Check if stack fits.
+				if(stack.amount + _amount <= _item.maxStack){
+					_amount += stack.amount;
+					stack.amount(0);
+				} else { //Max out stack when not.
+					stack.mutateAmount(_item.maxStack - _amount);
+					_amount = _item.maxStack;
+				}
+				return stack.amount;
 			}
 			return stack.amount;
-			
 		}
 		
 		public function get weight():Number {

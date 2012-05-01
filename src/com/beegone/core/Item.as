@@ -107,11 +107,10 @@ package com.beegone.core
 			return new Item(this.uid, this.name, this._maxStack, this._weight, this._usable, this._uses, this._equipable, this._equipmentType, this._consumable, this._description);
 		}
 		
-		override public function equals(identity:*):Boolean
+		
+		public function isStackable(item:Item):Boolean
 		{
-			return super.equals(identity) && !_used;
-		}
-		
-		
+			return equals(item) && !_used && !item.used;
+		}		
 	}
 }
